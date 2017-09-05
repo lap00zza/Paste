@@ -1,0 +1,44 @@
+{
+  "name": "paste",
+  "version": "1.0.0",
+  "description": "Self hosted pastebin",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc && npm run sass",
+    "linter": "tslint -c tslint.json ./src/**/*.ts",
+    "sass": "node-sass src/assets/sass/style.sass dist/assets/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lap00zza/Paste.git"
+  },
+  "keywords": [
+    "paste",
+    "pastebin",
+    "self",
+    "hosted",
+    "self-hosted"
+  ],
+  "author": "Jewel Mahanta",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lap00zza/Paste/issues"
+  },
+  "homepage": "https://github.com/lap00zza/Paste#readme",
+  "dependencies": {
+    "@types/koa": "^2.0.39",
+    "@types/koa-router": "^7.0.23",
+    "@types/koa-static": "^3.0.1",
+    "@types/koa-views": "^2.0.2",
+    "ejs": "^2.5.7",
+    "koa": "^2.3.0",
+    "koa-router": "^7.2.1",
+    "koa-static": "^4.0.1",
+    "koa-views": "^6.0.2",
+    "node-sass": "^4.5.3"
+  },
+  "devDependencies": {
+    "ts-lint": "^4.5.1",
+    "typescript": "^2.5.2"
+  }
+}
