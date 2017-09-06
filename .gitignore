@@ -1,5 +1,6 @@
 dist/
 start_server.sh
+init_db.sh
 
 # Created by https://www.gitignore.io/api/node,jetbrains
 

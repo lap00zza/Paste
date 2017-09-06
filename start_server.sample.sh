@@ -1,7 +1,6 @@
 #!/bin/sh
-# Remember to fill in these before starting Paste.
-# Also, you might want to copy the content of this
-# file to a separate file 'start_server.sh'
+# Remember to fill in these before starting Paste
+# and rename it to 'start_server.sh'
 PGUSER=USER \
 PGHOST=HOST \
 PGPASSWORD=PASSWORD \

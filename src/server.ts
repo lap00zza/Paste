@@ -42,14 +42,6 @@ const db = new Client({
     user: process.env.PGUSER || "",
 });
 db.connect();
-// const initQuery = fs.readFileSync("../PASTE_DATABASE.sql").toString();
-/*db.query("SELECT * FROM paste;", (err, res) => {
-    if (err) {
-        console.log(err);
-    } else {
-        console.log(res);
-    }
-});*/
 /* --- ~~~ --- */
 
 /* --- Initialize the middlewares --- */
