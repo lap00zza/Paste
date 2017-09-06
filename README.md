@@ -1,4 +1,6 @@
 # Paste
+[![Build Status](https://travis-ci.org/lap00zza/Paste.svg?branch=master)](https://travis-ci.org/lap00zza/Paste)
+
 A self-hosted pastebin
 
 ## Requirements
