@@ -69,7 +69,7 @@ router.get("index", "/", async ctx => {
     await ctx.render("index.ejs");
 });
 
-router.get("get_post", "/:id", async ctx => {
+router.get("get_paste", "/:id", async ctx => {
     try {
         const query = "SELECT * FROM paste WHERE id = $1";
         const response = await db.query(query, [hashids.decode(ctx.params.id)[0]]);
