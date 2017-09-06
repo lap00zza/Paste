@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <title>Paste</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><%= title %></title>
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
@@ -14,20 +15,13 @@
             Paste
         </a>
     </h1>
-    <section class="tools">
-        <div>
-            <label for="paste__title">Title</label>
-            <input type="text" id="paste__title">
-        </div>
-    </section>
+    <span class="paste__title"><%= title %></span>
     <section class="paste__container">
-        <textarea id="paste" spellcheck="false"></textarea>
+        <pre class="paste__content"><%= content %></pre>
     </section>
-    <button id="paste__submit" type="submit">Create Paste</button>
     <footer>
         Made with <3 by <a href="https://github.com/lap00zza">@lap00zza</a>. Licensed under MIT.
     </footer>
 </div>
 </body>
-<script src="/ts/index.js"></script>
 </html>

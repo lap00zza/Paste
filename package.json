@@ -4,9 +4,7 @@
   "description": "Self hosted pastebin",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc && npm run sass",
-    "linter": "tslint -c tslint.json ./src/**/*.ts",
-    "sass": "node-sass src/assets/sass/style.sass dist/assets/css/style.css"
+    "build": "gulp"
   },
   "repository": {
     "type": "git",
@@ -27,17 +25,27 @@
   "homepage": "https://github.com/lap00zza/Paste#readme",
   "dependencies": {
     "@types/koa": "^2.0.39",
+    "@types/koa-bodyparser": "^3.0.24",
     "@types/koa-router": "^7.0.23",
     "@types/koa-static": "^3.0.1",
     "@types/koa-views": "^2.0.2",
+    "@types/pg": "^6.1.43",
     "ejs": "^2.5.7",
+    "hashids": "^1.1.1",
     "koa": "^2.3.0",
+    "koa-bodyparser": "^4.2.0",
     "koa-router": "^7.2.1",
     "koa-static": "^4.0.1",
     "koa-views": "^6.0.2",
-    "node-sass": "^4.5.3"
+    "pg": "^7.3.0"
   },
   "devDependencies": {
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-typescript": "^3.2.2",
+    "node-sass": "^4.5.3",
+    "run-sequence": "^2.1.0",
     "ts-lint": "^4.5.1",
     "typescript": "^2.5.2"
   }
