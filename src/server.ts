@@ -33,15 +33,21 @@ enum IPasteType {
 const app = new Koa();
 const router = new Router();
 const hashids = new Hashids(process.env.SALT || "");
-const PORT = 3000;
-const db = new Client({
-    database: process.env.PGDATABASE || "",
-    host: process.env.PGHOST || "",
-    password: process.env.PGPASSWORD || "",
-    port: Number(process.env.PGPORT) || 0,
-    user: process.env.PGUSER || "",
-});
-db.connect();
+let db: Client;
+if (process.env.PGDATABASE && process.env.PGHOST && process.env.PGPASSWORD &&
+    process.env.PGPORT && process.env.PGUSER) {
+    db = new Client({
+        database: process.env.PGDATABASE,
+        host: process.env.PGHOST,
+        password: process.env.PGPASSWORD,
+        port: Number(process.env.PGPORT),
+        user: process.env.PGUSER,
+    });
+    db.connect();
+} else {
+    console.error("Required environment variables are not present. Fill them out in start_server.sh.");
+    process.exit(1);
+}
 /* --- ~~~ --- */
 
 /* --- Initialize the middlewares --- */
@@ -104,5 +110,8 @@ app.use(router.routes());
 app.use(router.allowedMethods());
 
 // Run paste
-app.listen(PORT);
-console.log(`Running Paste on port ${PORT}`);
+const PORT = Number(process.env.PASTE_PORT || 3000);
+const HOST = process.env.PASTE_HOST || "127.0.0.1";
+app.listen(PORT, HOST, () => {
+    console.log(`Running Paste on port ${HOST}:${PORT}`);
+});
