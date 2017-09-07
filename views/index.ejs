@@ -8,26 +8,32 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-<div class="container">
-    <h1 class="title">
-        <a href="/">
-            Paste
-        </a>
-    </h1>
-    <section class="tools">
+<nav class="nav">
+    <div class="container">
+        <div class="title nav-item">
+            <a href="/">
+                Paste
+            </a>
+        </div>
+    </div>
+</nav>
+<!-- Main Paste interface -->
+<section class="container">
+    <div class="tools">
         <div>
             <label for="paste__title">Title</label>
             <input type="text" id="paste__title">
         </div>
-    </section>
-    <section class="paste__container">
-        <textarea id="paste" spellcheck="false"></textarea>
-    </section>
+    </div>
+    <textarea id="paste" spellcheck="false"></textarea>
     <button id="paste__submit" type="submit">Create Paste</button>
-    <footer>
-        Made with <3 by <a href="https://github.com/lap00zza">@lap00zza</a>. Licensed under MIT.
-    </footer>
-</div>
+</section>
+<footer>
+    <div class="container">
+        Made with <3 by <a href="https://github.com/lap00zza">@lap00zza</a>. Check the source code on
+        <a href="https://github.com/lap00zza/Paste">Github</a>.
+    </div>
+</footer>
 </body>
 <script src="/ts/index.js"></script>
 </html>

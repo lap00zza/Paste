@@ -7,21 +7,34 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title><%= title %></title>
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css"
+          integrity="sha256-akwTLZec/XAFvgYgVH1T5/369lhA2Efr22xzCNl1nHs=" crossorigin="anonymous" />
 </head>
 <body>
+<nav class="nav">
+    <div class="container">
+        <div class="title nav-item">
+            <a href="/">
+                Paste
+            </a>
+        </div>
+    </div>
+</nav>
 <div class="container">
-    <h1 class="title">
-        <a href="/">
-            Paste
-        </a>
-    </h1>
-    <span class="paste__title"><%= title %></span>
-    <section class="paste__container">
-        <pre class="paste__content"><%= content %></pre>
+    <span class="view-paste__title"><%= title %></span>
+    <section class="view-paste__container">
+        <pre><code><%= content %></code></pre>
     </section>
-    <footer>
-        Made with <3 by <a href="https://github.com/lap00zza">@lap00zza</a>. Licensed under MIT.
-    </footer>
 </div>
+<footer>
+    <div class="container">
+        Made with <3 by <a href="https://github.com/lap00zza">@lap00zza</a>. Check the source code on
+        <a href="https://github.com/lap00zza/Paste">Github</a>.
+    </div>
+</footer>
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"
+        integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous">
+</script>
+<script>hljs.initHighlightingOnLoad();</script>
 </html>

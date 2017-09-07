@@ -1,30 +1,34 @@
+@import "new_paste"
+@import "view_paste"
 html, body
   margin: 0
   font-family: "Segoe UI", serif
 
-section
-  padding: 0.5rem
-  border: 1px solid #cccccc
-  border-radius: 3px
+a
+  text-decoration: none
 
+/**
+ * Navigation
+ */
+.nav-container
+  display: flex
+  max-width: 978px
+  margin: auto
+
+.title
+  font-size: 1.3rem
+  font-weight: 600
+  text-transform: uppercase
+  letter-spacing: 3px
+
+/**
+ * Others
+ */
 .container
   max-width: 978px
   padding: 1rem
   margin: auto
 
-.paste__container
-  margin: 1rem 0
-
-.paste__content
-  margin: 0
-  overflow: auto
-
-#paste
-  resize: none
-  width: 100%
-  height: 400px
-  padding: 0
-  border: none
-  outline: none
-  background: transparent
-  font-family: monospace
+footer
+  font-size: 0.85rem
+  color: #555
